@@ -78,4 +78,10 @@ public class SampleController {
 		return new ResponseEntity<Map<String, String>>(new HashMap<String, String>() {{put("result","success");}}, HttpStatus.OK); 
 	}
 
+	@PostMapping("/void")
+	public void registerVod(@RequestBody Sample sampleParam) throws InterruptedException {
+		log.info("sampleParam: {}", sampleParam);
+	}
+
+
 }
